@@ -1,0 +1,133 @@
+
+* {
+    box-sizing: border-box;
+  }
+
+/*Columns --------------------------------------------------*/
+
+/* Create three unequal columns that floats next to each other */
+div a {
+  color:rgb(249, 253, 0);
+}
+.column {
+  float: left;
+  padding: 10px;
+  height: 1024px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 20%;
+}
+
+.right {
+  width: 10%;
+  background: black;
+  border: 1px solid rgb(55, 55, 55);
+}
+
+.middle {
+  background-color: black;
+  width: 70%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* left column graphics */
+#graphics-left-column{
+  color: rgb(255, 234, 0); 
+  background-color:rgb(0, 0, 0);
+  background-image: url(images/Bocchi-poster.jpg);
+  background-position-x: -120px;
+  scroll-behavior: auto;
+}
+
+.web-body{
+  /* Bocchi Home */
+  position: relative;
+  width: 1440px;
+  height: 961px;
+  background: #000000;
+}
+
+/*Cards Design -> Homepage ----------------------------------*/
+
+.card-style{
+  color:#ffdd00;
+  background-color: #2C2922;
+}
+
+.card-style:hover{
+  color: black;
+  background:#ffdd00;
+  transition: .75s;
+}
+
+.card-bg{
+  background-position: right;
+  background-repeat: no-repeat;
+  display: flexbox;
+}
+
+.card-bg2{
+  width: 100%;
+  background-image: url(images/10741857a.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: white;
+}
+
+.formbox{
+  background-color: yellow;
+  font-weight: 600;
+  font-size: medium;
+}
+
+/*Heading --------------------------------------------------*/
+.H2-modifier{
+  color: white; 
+  font-size: 50px; 
+  font-weight: 800;
+}
+
+.h1-modifier{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/*Buttons --------------------------------------------------*/
+.button{
+  color:rgb(249, 253, 0);
+  padding: 18px 40px;
+  margin: 4px 2px;
+  background-color: rgb(0, 0, 0);
+  border: 3px solid #ffdd00;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  font-weight: 800;
+  transition: .3s;
+  animation-direction: alternate;
+  cursor: pointer;
+}
+
+.button:hover{
+  color:rgb(249, 253, 0);
+  padding: 30px 64px;
+  transition: .5s;
+}
+
+/*Ticket sales page*/
+
+.ticketSaleBox{
+  color: white;
+  background-color: #2C2922;
+  text-align: center;
+  width: 100%;
+  height: 450px;
+  align-content: center;
+}

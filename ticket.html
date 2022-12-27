@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <link rel="stylesheet" href="css.css">
+    <script type="text/javascript">
+        function validate() {
+            var form = document.forms["buyTicket"];
+            var trxid = form["trxid"].value;
+            var phone = form["phone"].value;
+            var agreement = form["agreement"];
+            const db = ["trxid001", "0171", "TRJP-10223443"];
+            var error = "";
+
+            if (trxid == null || trxid == "") {
+                error = error + "Name must be filled out.\n"
+            }
+            if (phone == null || phone == "") {
+                error = error + "Username must be filled out.\n"
+            }
+            if (trxid != db[0] && phone != db[1]){
+                error = error + "Wrong trxid or phone\n"
+            }
+            if (!agreement.checked) {
+                error = error + "Agreement must be checked out.\n"
+            }
+
+            if (error != "") {
+                alert(error);
+                return false;
+            }
+            else {
+                var content = "<table border='1' style='text-align: center'>" +
+                    "<tr><th>TRXID</th><th>Phone</th><th>Ticket Passcode</th></tr>" +
+                    "<tr><td>" + trxid + "</td><td>" + phone + "</td><td>" + db[2] + "</td></tr></table>";
+                var newWin = window.open("", "", "width=300,height=200,scrollbars=yes");
+
+
+                newWin.document.write(content);
+                return true;
+            }
+        }
+    </script>
+    <style>
+
+    </style>
+</head>
+
+<body style="background-color: rgba(0, 0, 0, 0.766); font-family: 'Courier New', Courier, monospace;">
+
+<div class="row">
+
+  <div class="column left" id="graphics-left-column">
+    <img src="images/ph_bandlogo_2_4.png" style="width:100px;height:100px;"><br><br><br>
+    <a href="main.html">Main</a><br>
+    <a style="line-height: 3;" href="contact us.html">Contact us</a>    
+  </div>
+
+  <div class="column middle" style="color:aliceblue;">
+    <img src="images/cardbg.jpg" width="100%"><br>
+    <table class="ticketSaleBox" border="2">
+      <tr>
+        <td>
+          <h2 class="H2" style="color: yellow"><center>Jackland Live Performance</center></h2>
+          <p><center>
+            Time: 17:00 | 25th December<br>
+            Venue: Jackland Square<br><br>
+            Price: 200tk  |  Bkash: 0177
+          </center></p>
+          <h2 class="H2" style="color: black; background-color: yellow; font-weight: 800;"><center>Get Ticket</center></h2>
+          <div style="text-align:center">
+            <form onsubmit="return validate()" action="main.html"  name="buyTicket">
+              <input type="text" name="trxid" placeholder="BKASH TRXID" style="width: 15rem; height: 2rem;" /><br />
+              <input type="text" name="phone" placeholder="Phone Number" style="width: 15rem; height: 2rem;" /><br />
+              <input type="checkbox" id="agreementChBx" name="agreement" style="margin-bottom: 1em" />
+              <label for="agreementChBx">I agree the <a href="" target="_blank" style="width: 15rem; height: 3rem;">Terms &AMP; Conditions</a></label><br />
+              <input type="submit" name="submit" value="Get Ticket" style="width: 15rem; height: 3rem;" class="formbox">      
+            </form>
+          
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    
+    <table>
+    </table>
+  </div>
+
+  <div class="column right">
+    <h2>Column 3</h2>
+  </div>
+
+</div>
+
+</body>
+</html>
